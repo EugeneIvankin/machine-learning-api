@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
+import { Product } from '../contracts';
+
 @Injectable()
-export class BestFoodsService {
-  public bestFoodProducts: any = [
+export class HomepageService {
+  public bestFoodProducts: Product[] = [
     {
       id: '286310',
       name: 'Виноград синий, 1 кг.',
@@ -28,10 +30,10 @@ export class BestFoodsService {
       weight: '1 кг',
       cost: '2.99',
       nutritionalValue: [
-        {name: 'Белки', value: '0.72 г'},
-        {name: 'Жиры', value: '0.16 г'},
-        {name: 'Углеводы', value: '18.1 г'},
-        {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
+          {name: 'Белки', value: '0.72 г'},
+          {name: 'Жиры', value: '0.16 г'},
+          {name: 'Углеводы', value: '18.1 г'},
+          {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
       ],
       description: 'Сорт: Кодрянка, класс 1. Урожай: 2019 г.',
       pop: '4.34',
@@ -45,10 +47,10 @@ export class BestFoodsService {
       weight: '1 кг',
       cost: '2.99',
       nutritionalValue: [
-        {name: 'Белки', value: '0.72 г'},
-        {name: 'Жиры', value: '0.16 г'},
-        {name: 'Углеводы', value: '18.1 г'},
-        {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
+          {name: 'Белки', value: '0.72 г'},
+          {name: 'Жиры', value: '0.16 г'},
+          {name: 'Углеводы', value: '18.1 г'},
+          {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
       ],
       description: 'Сорт: Кодрянка, класс 1. Урожай: 2019 г.',
       pop: '4.34',
@@ -62,10 +64,10 @@ export class BestFoodsService {
       weight: '1 кг',
       cost: '2.99',
       nutritionalValue: [
-        {name: 'Белки', value: '0.72 г'},
-        {name: 'Жиры', value: '0.16 г'},
-        {name: 'Углеводы', value: '18.1 г'},
-        {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
+          {name: 'Белки', value: '0.72 г'},
+          {name: 'Жиры', value: '0.16 г'},
+          {name: 'Углеводы', value: '18.1 г'},
+          {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
       ],
       description: 'Сорт: Кодрянка, класс 1. Урожай: 2019 г.',
       pop: '4.34',
@@ -79,10 +81,10 @@ export class BestFoodsService {
       weight: '1 кг',
       cost: '2.99',
       nutritionalValue: [
-        {name: 'Белки', value: '0.72 г'},
-        {name: 'Жиры', value: '0.16 г'},
-        {name: 'Углеводы', value: '18.1 г'},
-        {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
+          {name: 'Белки', value: '0.72 г'},
+          {name: 'Жиры', value: '0.16 г'},
+          {name: 'Углеводы', value: '18.1 г'},
+          {name: 'Энергетическая ценность', value: '69 ккал/ 288 кДж'},
       ],
       description: 'Сорт: Кодрянка, класс 1. Урожай: 2019 г.',
       pop: '4.34',
@@ -90,7 +92,11 @@ export class BestFoodsService {
     },
   ];
 
-  get(): any {
+  getPopProducts(): Product[] {
+    return this.bestFoodProducts;
+  }
+
+  getRecommendedProduct(): Product[] {
     return this.bestFoodProducts;
   }
 }
