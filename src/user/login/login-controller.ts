@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
 import { UserService } from '../../services/user';
 
@@ -6,8 +6,8 @@ import { UserService } from '../../services/user';
 export class LoginController {
 	constructor(private readonly service: UserService) {}
 
-	@Get()
-	login(): boolean {
-		return this.service.login();
+	@Get(':id')
+	login(@Param() params) {
+		return this.service.login(params.id);
 	}
 }
