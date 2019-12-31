@@ -9,7 +9,7 @@ import { PurchasesModule } from './payments/purchases.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot(),
+    // TypeOrmModule.forRoot(),
     ProductsModule,
     UserModule,
     PurchasesModule,

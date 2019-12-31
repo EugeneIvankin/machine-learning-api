@@ -6,8 +6,8 @@ import { UserService } from '../../services/user';
 export class LoginController {
 	constructor(private readonly service: UserService) {}
 
-	@Get(':id')
-	login(@Param() params) {
-		return this.service.login(params.id);
-	}
+	// @Get(':id')
+	// login(@Param() params) {
+	// 	return this.service.login(params.id);
+	// }
 }

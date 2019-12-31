@@ -5,10 +5,10 @@ import { LoginController } from './login';
 import { LogoutController } from './logout';
 import { SignUpController } from './sign-up';
 import { UserService } from '../services/user';
-import { User } from '../user.entity';
+// import { User } from '../user.entity';
 
 @Module({
-	imports: [TypeOrmModule.forFeature([User])],
+	// imports: [TypeOrmModule.forFeature([User])],
 	controllers: [
 		LoginController,
 		LogoutController,
